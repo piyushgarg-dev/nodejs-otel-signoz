@@ -43,9 +43,9 @@ app.post("/api/data", (req, res) => {
   return res.json({ received: true, data: req.body });
 });
 
-app.listen(9000, () => {
+app.listen(process.env.PORT ?? 3000, () => {
   logger.info("Server is running on port 9000", {
-    port: 9000,
+    port: process.env.PORT ?? 3000,
     environment: process.env.NODE_ENV || "development",
     serviceName: process.env.OTEL_SERVICE_NAME || "my-express",
   });
