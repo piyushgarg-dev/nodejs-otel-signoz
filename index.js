@@ -21,7 +21,7 @@ app.use((req, res, next) => {
 
 app.get("/", (req, res) => {
   logger.info("Root endpoint accessed");
-  return res.json({ msg: "Hey There" });
+  return res.json({ msg: "Hey There, I am v2" });
 });
 
 // Example endpoint with different log levels
